@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCadastroEscola.CpCursos">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <SearchBar x:Name="sbCursos" TextChanged="sbCursos_TextChanged"  Placeholder="PESQUISAR"/>
+
+
+            <Entry x:Name="txtCurso" Placeholder="Curso"/>
+
+            <Button x:Name="btnInserir" Text="INSERIR CURSO" Clicked="btnInserir_Clicked"/>
+
+            <ListView x:Name="lstCursos" ItemSelected="lstCursos_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid ColumnDefinitions="*">
+
+                                <Label Text="{Binding curso}"/>
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+
+            <Button x:Name="btnVoltar" Text="PAGINA INICIAL" Clicked="btnVoltar_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

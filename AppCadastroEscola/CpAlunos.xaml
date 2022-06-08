@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCadastroEscola.CpAlunos">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <SearchBar x:Name="sbAlunos" TextChanged="sbAlunos_TextChanged" Placeholder="PESQUISAR"/>
+
+            
+            <Entry x:Name="txtNome" Placeholder="Nome"/>
+            <Entry x:Name="txtIdade" Placeholder="Idade"/>
+
+            <Button x:Name="btnInserir" Text="INSERIR ALUNO" Clicked="btnInserir_Clicked"/>
+
+            <ListView x:Name="lstAlunos" ItemSelected="lstAlunos_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid ColumnDefinitions="*,*">
+
+                                <Label Text="{Binding nome}"/>
+                                <Label Grid.Column="1" Text="{Binding idade}" />
+                           
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            
+
+            <Button x:Name="btnVoltar" Text="PAGINA INICIAL" Clicked="btnVoltar_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

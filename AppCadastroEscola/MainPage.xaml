@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCadastroEscola.MainPage">
+
+    <StackLayout>
+
+        <!-- FIZ APENAS O CADASTRO DE ALUNOS, COMECEI O DE PROFESSORES MAS NÃO DEU TEMPO DE TERMINAR -->
+
+        <Frame BackgroundColor="DarkRed" Padding="25" HorizontalOptions="CenterAndExpand">
+            <Label Text="CADASTROS" FontSize="42" FontAttributes="Bold"/>
+        </Frame>
+
+        <StackLayout HorizontalOptions="FillAndExpand">
+
+            <Button x:Name="btnAluno" Text="ALUNOS" Clicked="btnAluno_Clicked"/>
+
+            <Button x:Name="btnProfessores" Text="PROFESSORES" Clicked="btnProfessores_Clicked"/>
+
+            <Button x:Name="btnCursos" Text="CURSOS" Clicked="btnCursos_Clicked"/>
+
+            <Button x:Name="btnDisciplinas" Text="DISCIPLINAS" Clicked="btnDisciplinas_Clicked"/>
+
+        </StackLayout>
+        
+        
+    </StackLayout>
+
+</ContentPage>
