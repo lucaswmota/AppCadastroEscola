@@ -5,10 +5,8 @@
 
     <StackLayout>
 
-        <!-- FIZ APENAS O CADASTRO DE ALUNOS, COMECEI O DE PROFESSORES MAS NÃO DEU TEMPO DE TERMINAR -->
-
-        <Frame BackgroundColor="DarkRed" Padding="25" HorizontalOptions="CenterAndExpand">
-            <Label Text="CADASTROS" FontSize="42" FontAttributes="Bold"/>
+        <Frame BackgroundColor="DarkRed" Padding="25" HorizontalOptions="FillAndExpand">
+            <Label Text="CADASTROS" FontSize="42" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
         </Frame>
 
         <StackLayout HorizontalOptions="FillAndExpand">

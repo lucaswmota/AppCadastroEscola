@@ -4,9 +4,29 @@
              x:Class="AppCadastroEscola.CpDisciplinas">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+            <SearchBar x:Name="sbDisciplinas" TextChanged="sbDisciplinas_TextChanged"  Placeholder="PESQUISAR"/>
+
+            <Entry x:Name="txtDisciplina" Placeholder="Disciplina"/>
+
+            <Button x:Name="btnInserir" Text="INSERIR DISCIPLINA" Clicked="btnInserir_Clicked"/>
+
+            <ListView x:Name="lstDisciplinas" ItemSelected="lstDisciplinas_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid ColumnDefinitions="*">
+
+                                <Label Text="{Binding disciplina}"/>
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button x:Name="btnVoltar" Text="PAGINA INICIAL" Clicked="btnVoltar_Clicked"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
